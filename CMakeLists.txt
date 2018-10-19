@@ -236,7 +236,7 @@ endif()
 if (ASMJIT_SANITIZE)
   ASMJIT_detect_sanitizers(ASMJIT_SANITIZE_CFLAGS ${ASMJIT_SANITIZE})
   if (ASMJIT_SANITIZE_CFLAGS)
-    message("-- Enabling sanitizers: '${ASMJIT_SANITIZE_CFLAGS}'")
+    message(STATUS "-- Enabling sanitizers: '${ASMJIT_SANITIZE_CFLAGS}'")
 
     # Linker must receive the same flags as the compiler when it comes to sanitizers.
     set(ASMJIT_SANITIZE_LFLAGS ${ASMJIT_SANITIZE_CFLAGS})
@@ -479,16 +479,16 @@ endif()
 # AsmJit - Summary
 # ================
 
-message("** AsmJit Summary **")
-message("   ASMJIT_DIR=${ASMJIT_DIR}")
-message("   ASMJIT_TEST=${ASMJIT_TEST}")
-message("   ASMJIT_TARGET_TYPE=${ASMJIT_TARGET_TYPE}")
-message("   ASMJIT_DEPS=${ASMJIT_DEPS}")
-message("   ASMJIT_LIBS=${ASMJIT_LIBS}")
-message("   ASMJIT_CFLAGS=${ASMJIT_CFLAGS}")
-message("   ASMJIT_PRIVATE_CFLAGS=${ASMJIT_PRIVATE_CFLAGS}")
-message("   ASMJIT_PRIVATE_CFLAGS_DBG=${ASMJIT_PRIVATE_CFLAGS_DBG}")
-message("   ASMJIT_PRIVATE_CFLAGS_REL=${ASMJIT_PRIVATE_CFLAGS_REL}")
+message(STATUS "** AsmJit Summary **")
+message(STATUS "   ASMJIT_DIR=${ASMJIT_DIR}")
+message(STATUS "   ASMJIT_TEST=${ASMJIT_TEST}")
+message(STATUS "   ASMJIT_TARGET_TYPE=${ASMJIT_TARGET_TYPE}")
+message(STATUS "   ASMJIT_DEPS=${ASMJIT_DEPS}")
+message(STATUS "   ASMJIT_LIBS=${ASMJIT_LIBS}")
+message(STATUS "   ASMJIT_CFLAGS=${ASMJIT_CFLAGS}")
+message(STATUS "   ASMJIT_PRIVATE_CFLAGS=${ASMJIT_PRIVATE_CFLAGS}")
+message(STATUS "   ASMJIT_PRIVATE_CFLAGS_DBG=${ASMJIT_PRIVATE_CFLAGS_DBG}")
+message(STATUS "   ASMJIT_PRIVATE_CFLAGS_REL=${ASMJIT_PRIVATE_CFLAGS_REL}")
 
 # AsmJit - Targets
 # ================
