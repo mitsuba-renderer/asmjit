@@ -313,7 +313,7 @@ struct Operand_ {
 
   //! Get if the operand is 100% equal to `other`.
   ASMJIT_INLINE bool isEqual(const Operand_& other) const noexcept {
-    return (_packed[0] == other._packed[0]) &
+    return (_packed[0] == other._packed[0]) &&
            (_packed[1] == other._packed[1]) ;
   }
 
@@ -780,8 +780,8 @@ public:
     return (op.getSignature() & (kSignatureOpMask | kSignatureRegKindMask)) == kSgn;
   }
 
-  static ASMJIT_INLINE bool isGp(const Operand_& op, uint32_t rId) noexcept { return isGp(op) & (op.getId() == rId); }
-  static ASMJIT_INLINE bool isVec(const Operand_& op, uint32_t rId) noexcept { return isVec(op) & (op.getId() == rId); }
+  static ASMJIT_INLINE bool isGp(const Operand_& op, uint32_t rId) noexcept { return isGp(op) && (op.getId() == rId); }
+  static ASMJIT_INLINE bool isVec(const Operand_& op, uint32_t rId) noexcept { return isVec(op) && (op.getId() == rId); }
 };
 
 // ============================================================================

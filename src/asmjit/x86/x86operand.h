@@ -351,24 +351,24 @@ public:
   static ASMJIT_INLINE bool isCr(const Operand_& op) noexcept { return op.as<X86Reg>().isCr(); }
   static ASMJIT_INLINE bool isDr(const Operand_& op) noexcept { return op.as<X86Reg>().isDr(); }
 
-  static ASMJIT_INLINE bool isGpb(const Operand_& op, uint32_t rId) noexcept { return isGpb(op) & (op.getId() == rId); }
+  static ASMJIT_INLINE bool isGpb(const Operand_& op, uint32_t rId) noexcept { return isGpb(op) && (op.getId() == rId); }
 
-  static ASMJIT_INLINE bool isRip(const Operand_& op, uint32_t rId) noexcept { return isRip(op) & (op.getId() == rId); }
-  static ASMJIT_INLINE bool isSeg(const Operand_& op, uint32_t rId) noexcept { return isSeg(op) & (op.getId() == rId); }
-  static ASMJIT_INLINE bool isGpbLo(const Operand_& op, uint32_t rId) noexcept { return isGpbLo(op) & (op.getId() == rId); }
-  static ASMJIT_INLINE bool isGpbHi(const Operand_& op, uint32_t rId) noexcept { return isGpbHi(op) & (op.getId() == rId); }
-  static ASMJIT_INLINE bool isGpw(const Operand_& op, uint32_t rId) noexcept { return isGpw(op) & (op.getId() == rId); }
-  static ASMJIT_INLINE bool isGpd(const Operand_& op, uint32_t rId) noexcept { return isGpd(op) & (op.getId() == rId); }
-  static ASMJIT_INLINE bool isGpq(const Operand_& op, uint32_t rId) noexcept { return isGpq(op) & (op.getId() == rId); }
-  static ASMJIT_INLINE bool isFp(const Operand_& op, uint32_t rId) noexcept { return isFp(op) & (op.getId() == rId); }
-  static ASMJIT_INLINE bool isMm(const Operand_& op, uint32_t rId) noexcept { return isMm(op) & (op.getId() == rId); }
-  static ASMJIT_INLINE bool isK(const Operand_& op, uint32_t rId) noexcept { return isK(op) & (op.getId() == rId); }
-  static ASMJIT_INLINE bool isXmm(const Operand_& op, uint32_t rId) noexcept { return isXmm(op) & (op.getId() == rId); }
-  static ASMJIT_INLINE bool isYmm(const Operand_& op, uint32_t rId) noexcept { return isYmm(op) & (op.getId() == rId); }
-  static ASMJIT_INLINE bool isZmm(const Operand_& op, uint32_t rId) noexcept { return isZmm(op) & (op.getId() == rId); }
-  static ASMJIT_INLINE bool isBnd(const Operand_& op, uint32_t rId) noexcept { return isBnd(op) & (op.getId() == rId); }
-  static ASMJIT_INLINE bool isCr(const Operand_& op, uint32_t rId) noexcept { return isCr(op) & (op.getId() == rId); }
-  static ASMJIT_INLINE bool isDr(const Operand_& op, uint32_t rId) noexcept { return isDr(op) & (op.getId() == rId); }
+  static ASMJIT_INLINE bool isRip(const Operand_& op, uint32_t rId) noexcept { return isRip(op) && (op.getId() == rId); }
+  static ASMJIT_INLINE bool isSeg(const Operand_& op, uint32_t rId) noexcept { return isSeg(op) && (op.getId() == rId); }
+  static ASMJIT_INLINE bool isGpbLo(const Operand_& op, uint32_t rId) noexcept { return isGpbLo(op) && (op.getId() == rId); }
+  static ASMJIT_INLINE bool isGpbHi(const Operand_& op, uint32_t rId) noexcept { return isGpbHi(op) && (op.getId() == rId); }
+  static ASMJIT_INLINE bool isGpw(const Operand_& op, uint32_t rId) noexcept { return isGpw(op) && (op.getId() == rId); }
+  static ASMJIT_INLINE bool isGpd(const Operand_& op, uint32_t rId) noexcept { return isGpd(op) && (op.getId() == rId); }
+  static ASMJIT_INLINE bool isGpq(const Operand_& op, uint32_t rId) noexcept { return isGpq(op) && (op.getId() == rId); }
+  static ASMJIT_INLINE bool isFp(const Operand_& op, uint32_t rId) noexcept { return isFp(op) && (op.getId() == rId); }
+  static ASMJIT_INLINE bool isMm(const Operand_& op, uint32_t rId) noexcept { return isMm(op) && (op.getId() == rId); }
+  static ASMJIT_INLINE bool isK(const Operand_& op, uint32_t rId) noexcept { return isK(op) && (op.getId() == rId); }
+  static ASMJIT_INLINE bool isXmm(const Operand_& op, uint32_t rId) noexcept { return isXmm(op) && (op.getId() == rId); }
+  static ASMJIT_INLINE bool isYmm(const Operand_& op, uint32_t rId) noexcept { return isYmm(op) && (op.getId() == rId); }
+  static ASMJIT_INLINE bool isZmm(const Operand_& op, uint32_t rId) noexcept { return isZmm(op) && (op.getId() == rId); }
+  static ASMJIT_INLINE bool isBnd(const Operand_& op, uint32_t rId) noexcept { return isBnd(op) && (op.getId() == rId); }
+  static ASMJIT_INLINE bool isCr(const Operand_& op, uint32_t rId) noexcept { return isCr(op) && (op.getId() == rId); }
+  static ASMJIT_INLINE bool isDr(const Operand_& op, uint32_t rId) noexcept { return isDr(op) && (op.getId() == rId); }
 
   // --------------------------------------------------------------------------
   // [Memory Cast]
